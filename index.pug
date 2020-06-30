@@ -1,0 +1,21 @@
+mixin menu(nombre_menu, url, img)
+  li
+    span=nombre_menu
+    a(href=""+url)
+      img(src="img/"+img)  
+
+doctype html
+html
+  head
+    title macOsDock_html
+    link(rel="stylesheet", href="css/styles.css")
+  body
+    #dock-container
+      div(id="dock")
+        ul
+          +menu('menu1', '#', 'menu1.png')
+          +menu('menu2', '#', 'menu2.png')
+          +menu('menu3', '#', 'menu3.png')
+          +menu('menu4', '#', 'menu4.png')
+          +menu('menu5', '#', 'menu5.png')
+          +menu('menu5', '#', 'menu6.png')
